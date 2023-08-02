@@ -1,9 +1,9 @@
-<?php
+
 
 // + - *, /, ^, %, 
-$value = 2;
-$value2 = 2;
-$operador  = "%";
+$value = 100;
+$value2 = 10;
+$operador  = "ma";
 
 $resultado = 0;
 
@@ -33,7 +33,7 @@ if ($operador == "pow") {
     // mostrara el resulta elevado a potenciado
     $resultado = pow($value, $value2); 
 }
-// si el operador 
+    // si el operador 
 if ($operador == "%") {
     // mostrara el resultado 
     $resto =  ($value % $value2); 
@@ -44,6 +44,23 @@ if ($operador == "%") {
 
     }
 }
+// porcentual
+if ($operador == 'perc') {
+    $desconto = ($value * $value2) / 100; //10
+    $resultado = $value - $desconto;
+
+}
+//porcentual acrescentado
+if ($operador == 'perc+') {
+    $acrescimo= ($value * $value2) /100;
+    $resultado = $value + $acrescimo;
+
+}
+// medida aritmetica
+if ($operador == 'ma') {
+    $resultado = ($value + $value2) / 2;
+
+}
+
 
 echo "O valor é: {$resultado}";
-
