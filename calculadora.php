@@ -1,9 +1,9 @@
-
+<?php
 
 // + - *, /, ^, %, 
-$value = 100;
+$value = 1;
 $value2 = 10;
-$operador  = "ma";
+$operador  = "/";
 
 $resultado = 0;
 
@@ -62,5 +62,58 @@ if ($operador == 'ma') {
 
 }
 
+// echo "O valor é: {$resultado}";
 
-echo "O valor é: {$resultado}";
+
+//
+$num=1;
+
+while ($num <= 20) {
+   // echo "while o valor é {$num} <br>"; 
+    
+    $num++;
+}
+
+
+for ($i=0; $i < 10 ; $i++) { 
+    
+    //echo" {$i} <br>";
+}
+
+$i=0;
+
+do {
+    //echo "do while {$i} <br>";
+    $i++;
+}while($i<10);
+
+
+
+$num =2;
+for ($i= 0; $i <= 10 ; $i++) { 
+   
+    //echo "{$num} * {$i} = " . ($num * $i) ."<br>"; 
+    
+    
+}
+
+
+// media ponderada o Boletin escolar
+$media =3 ;
+
+$prova = 4.8;
+$peso = 5;
+$prova2 = 1.5;
+$peso2 = 3;
+$prova3 = 2;
+$peso3 = 2;
+$numerador = ($prova *$peso) + ($prova2 * $peso2) + ($prova3 * $peso3);
+$denominador = ($peso + $peso2 + $peso3);
+
+$mp = $numerador / $denominador;
+
+if ($mp >= $media) {
+   echo "o alumno Gregory foi aprovado a media é {$mp}";
+} else {
+    echo "o alumno Gregory foi Reprovado a media é {$mp}";
+}
