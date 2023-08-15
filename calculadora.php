@@ -8,7 +8,7 @@ $operador  = "/";
 $resultado = 0;
 
 // si el operador es division
-if ($operador == "/") {
+if ($operador == "/"); {
     $resultado = $value / $value2; 
 }
 
@@ -107,13 +107,35 @@ $prova2 = 1.5;
 $peso2 = 3;
 $prova3 = 2;
 $peso3 = 2;
+
 $numerador = ($prova *$peso) + ($prova2 * $peso2) + ($prova3 * $peso3);
 $denominador = ($peso + $peso2 + $peso3);
 
 $mp = $numerador / $denominador;
 
 if ($mp >= $media) {
-   echo "o alumno Gregory foi aprovado a media é {$mp}";
+  // echo "o alumno Gregory foi aprovado a media é {$mp}";
 } else {
-    echo "o alumno Gregory foi Reprovado a media é {$mp}";
+//   echo "o alumno Gregory foi Reprovado a media é {$mp}";
 }
+
+// media harmonica o Boletin escolar
+$media = 4;
+
+$a = 2;
+$peso = 1;
+$b = 3;
+$peso2 = 1;
+$c = 4;
+$peso3 = 1;
+
+$numerador = ($a / $peso) + ($b / $peso2) + ($c / $peso3);
+$denominador = ($peso + $peso2 + $peso3);
+
+$mh = $numerador / $denominador;
+
+if ($mh >= $media) {
+    echo "o alumno Gregory foi aprovado a media é {$mh}";
+ } else {
+    echo "o alumno Gregory foi Reprovado a media é {$mh}";
+ }
