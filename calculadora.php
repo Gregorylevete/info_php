@@ -135,7 +135,48 @@ $denominador = ($peso + $peso2 + $peso3);
 $mh = $numerador / $denominador;
 
 if ($mh >= $media) {
-    echo "o alumno Gregory foi aprovado a media é {$mh}";
+   // echo "o alumno Gregory foi aprovado a media é {$mh}";
  } else {
-    echo "o alumno Gregory foi Reprovado a media é {$mh}";
+   // echo "o alumno Gregory foi Reprovado a media é {$mh}";
  }
+
+ 
+
+$notas = [5,10,4];
+$smtotal = 0;
+ 
+  for ($i=0; $i < count($notas ) ; $i++) { 
+    $smtotal += $notas [$i];
+   
+ }
+
+ //echo "{$smtotal} <br>";
+
+
+ $mes =[
+"Janeiro", "fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"
+ ];
+ $numMes = 13;
+
+  if ($numMes >=1 && $numMes <=12) {
+     echo $mes[$numMes - 1];
+  }else {
+    // echo "Mes invalido o no existe <br>";
+    // echo "Bihanzero";
+     }
+
+     // calcular os 1 primeiros numeros primos
+
+ $numero = 1;
+ $divisor = 3;
+    
+ $arrayprimos = [];
+
+ $resto = $numero % $divisor;
+        if ($resto != 0) {
+      echo "primo";        
+       array_push($arrayprimos, $numero);
+     }       
+        
+        else{echo "no es primo";
+        }
