@@ -257,6 +257,6 @@
 
    $tempoDoJogo = ($totalFinalEmSegundos - $totalInicialEmSegundos) /60;
 
-    echo "Tempo do Jogo {$tempoDoJogo} minutos Gano inter 2 a 0";
+    //echo "Tempo do Jogo {$tempoDoJogo} minutos Gano inter 2 a 0";
  
 
