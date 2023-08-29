@@ -259,4 +259,3 @@
 
     //echo "Tempo do Jogo {$tempoDoJogo} minutos Gano inter 2 a 0";
  
-
