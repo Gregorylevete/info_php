@@ -15,5 +15,5 @@ $contador = 1 ;
 
  }
 
- echo  " <h1> o fatorial de", $numero, "e =", $fatorial , "</h1>";
+ echo  " <h1> o fatorial de ", $numero , " è =", $fatorial , "</h1>";
 
