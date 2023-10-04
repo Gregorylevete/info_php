@@ -81,35 +81,61 @@ $frutas = [
     "maça","maça",
     
     ];
-    // saida esperada : maça , banana, laranja , uva
-    // dica: in_array(), array_merge(), isset() array_unique()
+// saida esperada : maça , banana, laranja , uva
+// dica: in_array(), array_merge(), isset() array_unique()
  
-    $newFrutas = [];
-    for ($i = 0; $i < count($frutas); $i++ ) {
+$newFrutas = [];
+for ($i = 0; $i < count($frutas); $i++ ) {
 
-        $fruta = $frutas[$i];
-    
-         if (!isset($newFrutas[$fruta])) {
-            $newFrutas[$fruta] = 1; // ["maca"] = 1
-         } else {
-            $newFrutas[$fruta] += 1; // ["maca"] += 1 (2)
-         }
+    $fruta = $frutas[$i];
+
+    if (!isset($newFrutas[$fruta])) {
+        $newFrutas[$fruta] = 1; // ["maca"] = 1
+    } else {
+        $newFrutas[$fruta] += 1; // ["maca"] += 1 (2)
     }
+}
+
+// foreach ($newFrutas as $fruta => $quantidade) {
+//     echo "{$fruta} {$quantidade} <br>";
+// }
     
-    echo implode(",",$newFrutas,);
-    
-    
+
+// utilizar o mesmo exercicio e criar uma funcao ORDENACAO que recebe
+//dois parametros (array , string) para ordenar o array de frutas (1 parametro)
+// em ordem crescente (asc) ou descrecente (desc)    
+//dica: sort , usort, asort, ksort, rsort..
+/*
+uva => 1
+maca => 3
+*/
  
 
 
 
+function ordenacao($newFrutas, $ordem) {
+
+    if ($ordem == "desc") { // "desc" => 3, 2, 1
+        arsort($newFrutas);
+
+    } else { // "asc" => 1, 2, 3
+        asort($newFrutas);
+        
+    }
+
+    return $newFrutas;
+
+}
 
 
+// "asc" => 1, 2, 3
+// "desc" => 3, 2, 1
 
+$ordem = "asc";
 
+$newFrutas = ordenacao($newFrutas, $ordem);
 
-
-
-
-
+foreach ($newFrutas as $fruta => $quantidade) {
+    echo "{$fruta} {$quantidade} <br>";
+}
 
