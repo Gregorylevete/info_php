@@ -46,4 +46,18 @@ $mulher->batir($chute, $pedra);
 $mulher->dataDeNacimento();
 $mulher->pegarTelefone($tiró);
 
+/*class saiyajin {
+    
+    public string $nombre= "goku";
+    public int $nivel_pelea=1000;
+
+    public function saludar(){
+        return "hola soy".$this->nombre;
+    }
+
+    public function nivelDePelea(){
+        return $this->nombre. "tiene un nivel de pelea".$this->nivel_pelea;
+    }
+}
+*/
 
