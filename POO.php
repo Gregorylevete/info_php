@@ -2,25 +2,24 @@
 // oop || poo
 
 class pessoa {
-    const animado = 'vivo';  
-    public $cor;
-    public $nome;
-    protected $endereco;
-    Private $cpf;
-    private $edade;
-    public  $casado;
+   
+   const animado = 'vivo';  
+  
+   public $nome;
+   public $sobrenome;
+   public $edade;
+   public $tiro;
+   public $suaPareja;
 
-
-    public function batir($chute, $pedra) {
-        if ($chute == true) {
-            echo "ele sente dor <br>";
-        } else {
-            echo "esta legal <br>";
-        } 
+    public function __construct ($nome, $sobrenome,$edade) {
+        
+        $this-> nome = $nome;
+        $this-> sobrenome = $sobrenome;
+        $this-> edade = $edade;
     }
 
-    protected function pegarTelefone($tiró){
-        if ($suaPareja == false) {
+    public function pegarTelefone($suaPareja){
+        if ($suaPareja == 0) {
             echo "sua pareja batio ele <br>";
         } else {
             echo "ficaron juntos <br>";
@@ -28,24 +27,20 @@ class pessoa {
         
     }
 
-    private function tiraroupas() {
-        $this->batir();
-        self::animado;
-    }
 
     public function dataDeNacimento(){
         echo "a data de nacimento é : 19/19/1987 <br>";
     }
 } 
 
-$chute = false;
-$pedra = true;
-$tiró = true;
-$mulher = new pessoa();
-$mulher->batir($chute, $pedra);
-$mulher->dataDeNacimento();
-$mulher->pegarTelefone($tiró);
 
+$nome= "nome";
+$sobrenome  ="sobrenome";
+$edade ="edade";
+$mulher = new pessoa();
+$mulher->dataDeNacimento();
+$mulher->pegarTelefone(0);
+$mulher ->
 /*class saiyajin {
     
     public string $nombre= "goku";
@@ -60,4 +55,3 @@ $mulher->pegarTelefone($tiró);
     }
 }
 */
-
