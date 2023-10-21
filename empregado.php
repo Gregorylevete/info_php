@@ -7,84 +7,54 @@
 *implementar  a classe folha de pagamento
 */
 
+/*
+ * Implementar a classe estagiario
+ * Implementar a classe empregadoCLT
+ * Implementar a classe tercerizado 
+ * Implementar a classe Folha de Pagamento
+ */
 interface Remuneravel {
-    public function remuneracao();
+    public function faturar();
 }
 
-class empregadoCLT {
-    public remuneravel $empregadoCLT;
-
-    public function remuneracao(remuneravel $empregadoCLT) {
-        $this->empregadoCLT= $empregadoCLT;
+class Estagiario implements Remuneravel {
+    public  $salario = 1000 ;
+    public function faturar() {
+        $this->salario *= 2;
     }
 
+    
+}
+
+class Empregadoclt implements  Remuneravel{
+    public  $salario = 1000 ;
+    public function faturar() {
+        $this->salario *= 2;
+    }
+    
+}
+
+class Tercerizado  implements  Remuneravel{
+    public  $salario = 1000 ;
+    public function faturar() {
+        $this->salario *= 2;
+    }
+}
+class FolhaDePagamento {
+    public Remuneravel $salario ;
+
+    public function pagar(Remuneravel $salario){ 
+        $this->salario= $salario;
+        $this->salario->faturar();
+      
+    }
     public function __toString() {
-        echo $this->empregadoCLT;
+        return "O salário é :{$this->salario->salario}<br>";
     }
 }
 
-class Carro implements IVeiculo {
-    public $chave = "chave_presencial";
-    public $airbag = "motorista_carona";
+$estagiario = new Estagiario();
 
-    public function dirigir($chave) {
-        $this->chave = $chave;
-        echo "estou andando... {$this->chave}<br>";
-    }
-    
-    public function setAirBag($airbag) {
-        $this->airbag = $airbag;
-        echo "o airbag é... {$this->airbag}<br>";
-    }
-    
-}
-
-class Trator implements IVeiculo {
-    public $chave = "chave_normal";
-
-    public function dirigir($chave) {
-        $this->chave = $chave;
-        echo "estou andando... {$this->chave}<br>";
-    }
-}
-
-class Carreta implements IVeiculo {
-    public $chave = "chave_canivete";
-
-    public function dirigir($chave) {
-        $this->chave = $chave;
-        $oleo = $this->verificarOleoMotor();
-        echo "estou andando... {$this->chave}<br>" . $oleo;
-    }
-
-    public function verificarOleoMotor() {
-        return "Oleo esta OK!<br>";
-    }
-
-}
-
-
-class Moto implements IVeiculo {
-    public $chave = "chave_normal";
-
-    public function dirigir($chave) {
-        $this->chave = $chave;
-        echo "estou andando... {$this->chave}<br>";
-    }
-}
-
-$cahve = "xyz";
-
-$carro = new Carro();
-$carro->dirigir($cahve);
-$carro-setAirBag("airbag_lateral");
-
-$carreta = new Carreta();
-$carreta->dirigir("abc");
-
-
-$moto = new Moto();
-$moto->dirigir($cahve);
-
-$veiculo = new Veiculo();
-echo $veiculo->locomover($moto);
+$folha = new FolhaDePagamento();
+$folha->pagar($estagiario);
+echo "{$folha}";
