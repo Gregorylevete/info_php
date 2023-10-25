@@ -27,7 +27,7 @@ class Estagiario implements Remuneravel {
 }
 
 class Empregadoclt implements  Remuneravel{
-    public  $salario = 1000 ;
+    public  $salario = 2300 ;
     public function faturar() {
         $this->salario *= 2;
     }
@@ -35,7 +35,7 @@ class Empregadoclt implements  Remuneravel{
 }
 
 class Tercerizado  implements  Remuneravel{
-    public  $salario = 1000 ;
+    public  $salario = 1200 ;
     public function faturar() {
         $this->salario *= 2;
     }
@@ -53,8 +53,8 @@ class FolhaDePagamento {
     }
 }
 
-$estagiario = new Estagiario();
+$Empregadoclt = new Empregadoclt();
 
 $folha = new FolhaDePagamento();
-$folha->pagar($estagiario);
+$folha->pagar($Empregadoclt);
 echo "{$folha}";
