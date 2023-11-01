@@ -8,6 +8,14 @@
  * pessoa juridica (cnpj)validar o cnpj
  */
  
-class pessoa {
+class pessoaFisica {
+  public $nombre;
+  public $cpf;
 
+
+}
+
+class pessoaJuridica{
+    public $nombre;
+    public $cnpj;
 }
